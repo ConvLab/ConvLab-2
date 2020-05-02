@@ -5,7 +5,7 @@ ConvLab-2 is an open-source toolkit that enables researchers to build task-orien
 
 
 ## Evaluation
-# Multi-domain End-to-end Dialog Challenge
+### Multi-domain End-to-end Dialog Challenge
 1. Extend ConvLab-2 with your code, and submit up to 5 configurations of your agent.
 2. Make sure the code with the config is runnable in the docker environment.
 3. If your code uses external packages beyond the existing docker environment, please choose one of the following two approaches to specify your environment requirements:
@@ -13,6 +13,6 @@ ConvLab-2 is an open-source toolkit that enables researchers to build task-orien
     - Create your own Dockerfile with the name dev.dockerfile
 4. Zip the system and submit.
 
-# Multi-domain Cross-lingual Dialog State Tracking
+### Multi-domain Cross-lingual Dialog State Tracking
 1. Automatic end2end Evaluation: The submitted system will be evaluated using the user-simulator setting in spec `bertnlu_rule_rule_template`. We will use the evaluator MultiWozEvaluator in `convlab/evaluator/multiwoz` to report metrics including success rate, average reward, number of turms, precision, recall, and F1 score.
 2. Human Evaluation: The submitted system will be evaluated in Amazon Mechanic Turk. Crowd-workers will communicate with your summited system, and provide a rating based on the whole experience (language understanding, appropriateness, etc.)
