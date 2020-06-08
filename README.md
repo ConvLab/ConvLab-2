@@ -14,11 +14,20 @@ As part of the Ninth Dialog System Technology Challenge (DSTC9),  Microsoft Rese
 **Cross-lingual Multi-domain Dialog State Tracking** — Building a dialog system that handles multiple languages becomes increasingly important with the rapid process of globalization. To advance state-of-the-art technologies in handling cross-lingual multi-domain dialogs, we offer the task of building cross-lingual dialog state trackers with a training set in resource-rich language, and dev/test set in a resource-poor language. In particular, this task consists of two sub-tasks. One uses English as the resource-rich language and Chinese as the resource-poor language on the MultiWOZ dataset, and the other one uses Chinese as the resource-rich language and English as the resource-poor language on the CrossWOZ dataset.
 
 ### Timeline
-Jun 15, 2020: Competition Starts
-Sep 21, 2020: Test data is released
-Oct 5, 2020: Entry submission deadline
-Oct 19,2020: Results announced
-Nov 2020: Paper submission deadline
+<table>
+<tr>
+<td><b> Jun 15, 2020</b></td>  <td> Competition Starts </td>
+</tr>
+<tr>
+<td><b> Sep 21, 2020</b></td>  <td> Test data is released </td>
+</tr><tr>
+<td><b> Oct 5, 2020</b></td>  <td>Entry submission deadline </td>
+</tr><tr>
+<td><b> Oct 19,2020</b></td>  <td> Results announced </td>
+</tr><tr>
+<td><b> Nov 2020</b></td>  <td> Paper submission deadline </td>
+</tr>
+</table>
 
 ### Evaluation
 #### Multi-domain End-to-end Dialog Challenge Task
@@ -45,7 +54,7 @@ state are equal to the ground truth, microaveraged over all slots.
 
 #### Multi-domain Cross-lingual Dialog State Tracking Task
 1. Extend ConvLab-2 with your code, and submit up to 5 results.  In the main directory, please create a directory called `multiwoz-dst` or `crosswoz-dst` or both, based on your selected task(s), and include your prediction results with the name `submission[1-5]`. 
-2. Zip it and submit.
+2. Zip them and submit.
 
 **If you are participating both tasks, you can submit one zip file with the results of both tasks together**.
 
