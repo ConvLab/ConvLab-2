@@ -1,7 +1,7 @@
 ## ConvLab-2
 ConvLab-2 is an open-source toolkit that enables researchers to build task-oriented dialogue systems with state-of-the-art models, perform an end-to-end evaluation, and diagnose the weakness of systems. As the successor of ConvLab (https://github.com/ConvLab/ConvLab/), ConvLab-2 inherits ConvLab's framework but integrates more powerful dialogue models and supports more datasets. 
 
-The code of ConvLab-2 has been released here https://github.com/thu-coai/Convlab-2. 
+The code of ConvLab-2 has been released here(https://github.com/thu-coai/Convlab-2). 
 
 If you use ConvLab-2 in your research, please cite [ConvLab-2: An Open-Source Toolkit for Building, Evaluating, and Diagnosing Dialogue Systems](https://arxiv.org/abs/2002.04793).
 
@@ -47,7 +47,7 @@ state are equal to the ground truth, microaveraged over all slots.
 1. Extend ConvLab-2 with your code, and submit up to 5 results.  In the main directory, please create a directory called 'multiwoz-dst' or 'crosswoz-dst' or both, based on your selected task(s), and include your prediction results with the name 'submission[1-5]'. 
 2. Zip it and submit.
 
-**If you are participating both tasks, you can make one zip file and submit the results of both tasks together**.
+**If you are participating both tasks, you can submit one zip file with the results of both tasks together**.
 
 ### Contact Information
 Please email dstc9-mdtc@service.microsoft.com
