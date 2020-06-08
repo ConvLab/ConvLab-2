@@ -1,5 +1,5 @@
 ## ConvLab-2
-ConvLab-2 is an open-source toolkit that enables researchers to build task-oriented dialogue systems with state-of-the-art models, perform an end-to-end evaluation, and diagnose the weakness of systems. As the successor of [ConvLab] (https://github.com/ConvLab/ConvLab/), ConvLab-2 inherits ConvLab's framework but integrates more powerful dialogue models and supports more datasets. 
+ConvLab-2 is an open-source toolkit that enables researchers to build task-oriented dialogue systems with state-of-the-art models, perform an end-to-end evaluation, and diagnose the weakness of systems. As the successor of [ConvLab](https://github.com/ConvLab/ConvLab/), ConvLab-2 inherits ConvLab's framework but integrates more powerful dialogue models and supports more datasets. 
 
 The code of ConvLab-2 has been released [here](https://github.com/thu-coai/Convlab-2). 
 
@@ -37,14 +37,14 @@ state are equal to the ground truth, microaveraged over all slots.
 
 ### Submission (Tentative)
 ####  Multi-domain End-to-end Dialog Challenge Task
-1. Extend ConvLab-2 with your code, and submit up to 5 agents. In the main directory, please create a directory called 'end2end', and sub-directories with names 'submission[1-5]'. In the sub-directory, add your runnable main python scripts for both automatic evaluation and human evaluation, respectively. For automatic evaluation, please use a similar format as 'tests/test_end2end.py' in ConvLab-2 with the main script name as 'automatic.py'. For human evaluation, please use a similar format as 'convlab2/human_eval/run_agent.py' in ConvLab-2 with the main script name as 'human.py'. Human evaluation is executed in Amazon Mechanic Turk. Please make sure that your agent is compatible with 'convlab2/human_eval/run.py' for evaluation on Amazon Mechanic Turk.
+1. Extend ConvLab-2 with your code, and submit up to 5 agents. In the main directory, please create a directory called `end2end`, and sub-directories with names `submission[1-5]`. In the sub-directory, add your runnable main python scripts for both automatic evaluation and human evaluation, respectively. For automatic evaluation, please use a similar format as `tests/test_end2end.py` in ConvLab-2 with the main script name as `automatic.py`. For human evaluation, please use a similar format as `convlab2/human_eval/run_agent.py` in ConvLab-2 with the main script name as `human.py`. Human evaluation is executed in Amazon Mechanic Turk. Please make sure that your agent is compatible with `convlab2/human_eval/run.py` for evaluation on Amazon Mechanic Turk.
 2. If your code uses external packages beyond the existing docker environment, please choose one of the following two approaches to specify your environment requirements:
     - Add install.sh under the main directory. Running install.sh should install all required extra packages.
     - Create your own Dockerfile with the name dev.dockerfile
 3. Zip the system and submit.
 
 #### Multi-domain Cross-lingual Dialog State Tracking Task
-1. Extend ConvLab-2 with your code, and submit up to 5 results.  In the main directory, please create a directory called 'multiwoz-dst' or 'crosswoz-dst' or both, based on your selected task(s), and include your prediction results with the name 'submission[1-5]'. 
+1. Extend ConvLab-2 with your code, and submit up to 5 results.  In the main directory, please create a directory called `multiwoz-dst` or `crosswoz-dst` or both, based on your selected task(s), and include your prediction results with the name `submission[1-5]`. 
 2. Zip it and submit.
 
 **If you are participating both tasks, you can submit one zip file with the results of both tasks together**.
