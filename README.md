@@ -61,6 +61,7 @@ state are equal to the ground truth, microaveraged over all slots.
 
 ### Some useful papers
 [SOLOIST: Few-shot Task-Oriented Dialog with A Single Pre-trained Auto-regressive Model](https://arxiv.org/abs/2005.05298)
+
 [DialoGPT: Large-Scale Generative Pre-training for Conversational Response Generation](https://github.com/microsoft/DialoGPT)
 ### Contact Information
 Please email dstc9-mdtc@service.microsoft.com
