@@ -59,7 +59,7 @@ state are equal to the ground truth, microaveraged over all slots.
 **If you are participating both tasks, you can submit one zip file with the results of both tasks together**.
 
 
-### Some useful papers
+### Resources for reference
 [SOLOIST: Few-shot Task-Oriented Dialog with A Single Pre-trained Auto-regressive Model](https://arxiv.org/abs/2005.05298)
 
 [DialoGPT: Large-Scale Generative Pre-training for Conversational Response Generation](https://github.com/microsoft/DialoGPT)
