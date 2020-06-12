@@ -13,6 +13,7 @@ As part of the Ninth Dialog System Technology Challenge (DSTC9),  Microsoft Rese
 
 **Cross-lingual Multi-domain Dialog State Tracking** — Building a dialog system that handles multiple languages becomes increasingly important with the rapid process of globalization. To advance state-of-the-art technologies in handling cross-lingual multi-domain dialogs, we offer the task of building cross-lingual dialog state trackers with a training set in resource-rich language, and dev/test set in a resource-poor language. In particular, this task consists of two sub-tasks. One uses English as the resource-rich language and Chinese as the resource-poor language on the MultiWOZ dataset, and the other one uses Chinese as the resource-rich language and English as the resource-poor language on the CrossWOZ dataset.
 
+**[Task Proposal](https://drive.google.com/file/d/0Bx4CHsnRHDmJcHQxMmtJRUUyYVBJQnI5SUs5cWlfSGdQbVhj/view)**
 ### Timeline
 <table>
 <tr>
