@@ -1,7 +1,5 @@
 # CrossWOZ EN
 
-Kaili Huang
-
 This directory contains translated CrossWOZ dataset (from Chinese to English)
 
 #### Ontology translation

@@ -1,7 +1,5 @@
 # MultiWOZ ZH
 
-Kaili Huang
-
 This directory contains translated MultiWOZ 2.1 dataset (from English to Chinese)
 
 #### Ontology translation
