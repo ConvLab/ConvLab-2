@@ -11,7 +11,7 @@ If you use ConvLab-2 in your research, please cite [ConvLab-2: An Open-Source To
 
 As part of the Ninth Dialog System Technology Challenge (DSTC9),  Microsoft Research and Tsinghua University are hosting Multi-domain Task-oriented Dialog Challenge II, aiming to solve two tasks in the multi-domain task completion setting:
 
-**End-to-end Multi-domain Task Completion Dialog** — In recent years there has been an increasing interest in building complex task completion bots that span over multiple domains. In this task, participants will develop an end-to-end dialog system that receives natural language as an input and generates natural language as an output in the travel planning setting. There is no restriction on the modeling approaches, and all resources/datasets in the community can be used for model training. The system will be evaluated in MultiWOZ 2.1 dataset setting with ConvLab-2.
+**End-to-end Multi-domain Task Completion Dialog** — In recent years there has been an increasing interest in building complex task completion bots that span over multiple domains. In this task, participants will develop an end-to-end dialog system that receives natural language as an input and generates natural language as an output in the travel planning setting. There is no restriction on the modeling approaches, and all resources/datasets/pre-trained models in the community can be used for model training. The system will be evaluated in MultiWOZ 2.1 dataset setting with ConvLab-2.
 
 **Cross-lingual Multi-domain Dialog State Tracking** — Building a dialog system that handles multiple languages becomes increasingly important with the rapid process of globalization. To advance state-of-the-art technologies in handling cross-lingual multi-domain dialogs, we offer the task of building cross-lingual dialog state trackers with a training set in resource-rich language, and dev/test set in a resource-poor language. In particular, this task consists of two sub-tasks. One uses English as the resource-rich language and Chinese as the resource-poor language on the MultiWOZ dataset, and the other one uses Chinese as the resource-rich language and English as the resource-poor language on the CrossWOZ dataset.
 
@@ -42,9 +42,9 @@ truth.
 2. Slot Precision/Recall/F1. These metrics evaluate whether the predicted labels for individual slots in dialog
 state are equal to the ground truth, microaveraged over all slots.
 
-### Registration
-1. Submit the participation form [here](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR7x1M3FOeqhCttKwx4jvle9UNUVTQVRaT1AwUVRGUlc0WlBZVklQQ0tSWCQlQCN0PWcu).
-2. Participate at https://aka.ms/dstc-mdtc (sign up if you do not have a CodaLab account).
+### Registration and Participation
+1. Submit the participation form [here](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR7x1M3FOeqhCttKwx4jvle9UNUVTQVRaT1AwUVRGUlc0WlBZVklQQ0tSWCQlQCN0PWcu). Your identities will NOT be made public.
+2. Participate at https://aka.ms/dstc-mdtc (sign up if you do not have a CodaLab account). Participation is welcome from any team.
 
 ### Submission (Tentative)
 ####  Multi-domain End-to-end Dialog Challenge Task
@@ -66,4 +66,5 @@ state are equal to the ground truth, microaveraged over all slots.
 
 [DialoGPT: Large-Scale Generative Pre-training for Conversational Response Generation](https://github.com/microsoft/DialoGPT)
 ### Contact Information
-Please email dstc9-mdtc@service.microsoft.com
+Please email dstc9-mdtc@service.microsoft.com if you have any questions.
+For special enquiries, feel free to contact: jincli (at) microsoft (dot) com; zhu-q18 (at) mails (dot) tsinghua (dot) edu (dot) cn
