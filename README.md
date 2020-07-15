@@ -6,6 +6,9 @@ The code of ConvLab-2 has been released [here](https://github.com/thu-coai/Convl
 If you use ConvLab-2 in your research, please cite [ConvLab-2: An Open-Source Toolkit for Building, Evaluating, and Diagnosing Dialogue Systems](https://arxiv.org/abs/2002.04793).
 
 ## Participation in DSTC-9 Multi-Domain Task-Oriented Dialog Challenge II Track
+### Updates
+07/15/2020 -- A cleaned version of MultiWOZ 2.1 train/val/test dataset is added to `data/multiwoz/MultiWOZ2.1_Cleaned.zip`
+
 ### Task Description
 **[Task Proposal](https://drive.google.com/file/d/0Bx4CHsnRHDmJcHQxMmtJRUUyYVBJQnI5SUs5cWlfSGdQbVhj/view)**
 
