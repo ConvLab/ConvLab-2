@@ -36,7 +36,8 @@ As part of the Ninth Dialog System Technology Challenge (DSTC9),  Microsoft Rese
 
 ### Evaluation
 #### Multi-domain End-to-end Dialog Challenge Task
-1. Automatic end2end Evaluation: The submitted system (code) will be evaluated using the user-simulator setting `bertnlu + AgendaPolicy + templateNLG` as in [ConvLab-2](https://github.com/thu-coai/Convlab-2). We will use the evaluator MultiWozEvaluator in `convlab2/evaluator/multiwoz_eval.py` to report metrics including success rate, average reward, number of turms, precision, recall, and F1 score. (Note: The reference number (`Ref`) represents the index of the booked entity in the database (see [dbquery](https://github.com/thu-coai/ConvLab-2/blob/master/convlab2/util/multiwoz/dbquery.py) for details), which will be checked in automatic evaluation)
+1. Automatic end2end Evaluation: The submitted system (code) will be evaluated using the user-simulator setting `bertnlu + AgendaPolicy + templateNLG` as in [ConvLab-2](https://github.com/thu-coai/Convlab-2). We will use the evaluator MultiWozEvaluator in `convlab2/evaluator/multiwoz_eval.py` to report metrics, including success rate, number of turns, precision, recall, and F1 score. The success rate is considered as the key metric in the automatic evaluation.
+Note: The reference number (`Ref`) represents the index of the booked entity in the database (see [dbquery](https://github.com/thu-coai/ConvLab-2/blob/master/convlab2/util/multiwoz/dbquery.py) for details), which will be checked in the automatic evaluation.
 2. Human Evaluation: The submitted system will be evaluated in Amazon Mechanic Turk. Crowd-workers will communicate with your summited system, and provide a rating based on the whole experience (language understanding, appropriateness, etc.)
 #### Multi-domain Cross-lingual Dialog State Tracking Task
 We evaluate the performance of the dialog state tracker using two metrics:
