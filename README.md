@@ -66,7 +66,9 @@ state are equal to the ground truth, microaveraged over all slots.
 1. Extend ConvLab-2 with your code, and submit up to 5 results.  In the main directory, please create a directory called `multiwoz-dst` or `crosswoz-dst` or both, based on your selected task(s), and include your prediction results with the name `submission[1-5]`. 
 2. Zip them and submit.
 
-**If you are participating in both tasks, you can submit one zip file with both tasks' results. Please also note that the CodaLab system/dashboard will not report evaluation results. If you want to validate whether your submission is valid before the final submission, you can submit a test submission after September 21 and notify us via email.**
+**If you are participating in both tasks, you can submit one zip file with both tasks' results.** 
+
+**Please also note that the CodaLab system/dashboard will not report evaluation results. If you want to validate whether your submission is valid before the final submission, you can submit a test submission after September 21 and notify us via email.**
 
 
 ### Resources for reference
