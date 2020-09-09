@@ -45,7 +45,9 @@ For participants interested in the baseline model performance, please check [BER
 We evaluate the performance of the dialog state tracker using two metrics:
 1. Joint Goal Accuracy. This metric evaluates whether the predicted dialog state is exactly equal to the ground
 truth.
-2. Slot Precision/Recall/F1. These metrics evaluate whether the predicted labels for individual slots in dialog
+2. Slot Accuracy. This metric evaluates whether the predicted label for each individual slot is exactly equal to the ground
+truth, averaged over all slots.
+3. Slot Precision/Recall/F1. These metrics evaluate whether the predicted labels for individual slots in dialog
 state are equal to the ground truth, microaveraged over all slots.
 
 ### Registration and Participation
