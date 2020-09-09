@@ -39,6 +39,7 @@ As part of the Ninth Dialog System Technology Challenge (DSTC9),  Microsoft Rese
 1. Automatic end2end Evaluation: The submitted system (code) will be evaluated using the user-simulator setting `bertnlu + AgendaPolicy + templateNLG` as in [ConvLab-2](https://github.com/thu-coai/Convlab-2). We will use the evaluator MultiWozEvaluator in `convlab2/evaluator/multiwoz_eval.py` to report metrics, including success rate, number of turns, precision, recall, and F1 score. The success rate is considered as the key metric in the automatic evaluation.
 Note: The reference number (`Ref`) represents the index of the booked entity in the database (see [dbquery](https://github.com/thu-coai/ConvLab-2/blob/master/convlab2/util/multiwoz/dbquery.py) for details), which will be checked in the automatic evaluation.
 2. Human Evaluation: The submitted system will be evaluated in Amazon Mechanic Turk. Crowd-workers will communicate with your summited system, and provide a rating based on the whole experience (language understanding, appropriateness, etc.)
+(For participants interested in the performance of our baseline model, please check the model performance of [BERTNLU + RuleDST + RulePolicy + TemplateNLG](https://github.com/thu-coai/ConvLab-2/blob/master/tests/test_BERTNLU-RuleDST-RulePolicy-TemplateNLG.py) in ConvLab-2)
 #### Multi-domain Cross-lingual Dialog State Tracking Task
 We evaluate the performance of the dialog state tracker using two metrics:
 1. Joint Goal Accuracy. This metric evaluates whether the predicted dialog state is exactly equal to the ground
