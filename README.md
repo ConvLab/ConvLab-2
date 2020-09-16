@@ -68,7 +68,7 @@ state are equal to the ground truth, microaveraged over all slots.
 
 **If you are participating in both tasks, you can submit one zip file with both tasks' results.** 
 
-**Please also note that the CodaLab system/dashboard will not report evaluation results. If you want to validate whether your submission is valid before the final submission, you can submit a test submission after September 21 and notify us via email.**
+**Please also note that the CodaLab system/dashboard will not report evaluation results. If you want to validate whether your submission is errorless before the final submission, you can submit a test submission after September 21 and notify us via email.**
 
 
 ### Resources for reference
