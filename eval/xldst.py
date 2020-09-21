@@ -35,12 +35,12 @@ def extract_gt(data):
             for i in range(0, len(turns), 2):
                 usr_turn, sys_turn = turns[i:i + 2]
                 state = {}
-                for domain_name, domain in sys_turn['sys_state_init']:
+                for domain_name, domain in sys_turn['sys_state_init'].items():
                     domain_state = {}
                     for slot_name, value in domain.items():
                         if slot_name == 'selectedResults':
                             continue
-                        domain_state['slot_name'] = value
+                        domain_state[slot_name] = value
                     state[domain_name] = domain_state
                 states.append(state)
             gt[dialog_id] = states
@@ -58,7 +58,7 @@ def evaluate(gt, pred):
             ret[k] = v
         return ret
 
-    joint_acc, joint_tot = 0
+    joint_acc, joint_tot = 0, 0
     slot_acc, slot_tot = 0, 0
     tp, fp, fn = 0, 0, 0
     for dialog_id, gt_states in gt.items():
@@ -78,7 +78,7 @@ def evaluate(gt, pred):
 
                 pred_domain = pred_state[domain_name]
                 for slot_name, gt_value in gt_domain.items():
-                    if slot_name not in pred_state:
+                    if slot_name not in pred_domain:
                         return exception('slot missing', dialog_id=dialog_id, turn_id=turn_id, domain=domain_name, slot=slot_name)
                     pred_value = pred_domain[slot_name]
                     slot_tot += 1
@@ -111,12 +111,14 @@ def evaluate(gt, pred):
 if __name__ == '__main__':
     data_dir = os.path.join('../data/', 'multiwoz_zh' if subtask == 'multiwoz' else 'crosswoz_en')
     gt = extract_gt(json.load(zipfile.ZipFile(os.path.join(data_dir, 'human_val_data.zip')).open('human_val.json')))
-    json.dump(gt, open('gt-multiwoz.json', 'w'), ensure_ascii=False, indent=4)
+    # json.dump(gt, open('gt-crosswoz.json', 'w'), ensure_ascii=False, indent=4)
 
-    # results = {}
-    # for i in range(1, 6):
-    #     filename = f'submission{i}.json'
-    #     if not os.path.exists(filename):
-    #         continue
-    #     pred = json.load(open(filename))
-    #     results[filename] = evaluate(gt, pred)
+    results = {}
+    for i in range(1, 6):
+        filename = f'submission{i}.json'
+        if not os.path.exists(filename):
+            continue
+        pred = json.load(open(filename))
+        results[filename] = evaluate(gt, pred)
+
+    json.dump(results, open('results.json', 'w'), indent=4, ensure_ascii=False)
