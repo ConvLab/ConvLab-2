@@ -7,7 +7,7 @@ If you use ConvLab-2 in your research, please cite [ConvLab-2: An Open-Source To
 
 ## Participation in DSTC-9 Multi-Domain Task-Oriented Dialog Challenge II Track
 ### Updates
-09/22/2020 -- Test submission open. If you want to validate whether your submission is errorless before the final submission, you can submit a test submission in CodaLab. Note that CodaLab does not generate reports on the dashboard. We will manually validate your submission and email you about the results.
+09/22/2020 -- Test submission open. If you want to validate whether your submission is errorless before the final submission, you can submit a test submission in CodaLab. Note that CodaLab does not generate reports on the dashboard. We will manually validate your submission and email you about the results. Please do not hesitate to contact us if you have any questions.
 
 09/21/2020 -- Test data released for cross-lingual multi-domain dialog state tracking task
 1. MultiWOZ: [data/multiwoz_zh/dstc9-test-250.zip](https://github.com/ConvLab/ConvLab-2/blob/master/data/multiwoz_zh/dstc9-test-250.zip)
@@ -66,13 +66,15 @@ truth, averaged over all slots.
 2. If your code uses external packages beyond the existing docker environment, please choose one of the following two approaches to specify your environment requirements:
     - Add install.sh under the main directory. Running install.sh should install all required extra packages.
     - Create your own Dockerfile with the name dev.dockerfile
-3. Zip the system and submit.
+3. Please add a file called `model_description.txt` in the directory `end2end`, and add a brief description of your system. Based on the information you provide, we will make some summarization for our track review.
+4. Zip the system and submit.
 
-Notice: the simulator for evaluation may not be exactly same as `tests/test_end2end.py` in ConvLab-2.
+Notice: the simulator evaluation and human evaluation may not be exactly the same as `tests/test_end2end.py` and `convlab2/human_eval/` in ConvLab-2, respectively.
 
 #### Multi-domain Cross-lingual Dialog State Tracking Task
 1. Extend ConvLab-2 with your code, and submit up to 5 results and models. In the main directory, please create a directory called `multiwoz-dst` or `crosswoz-dst` or both, based on your selected task(s), and include your prediction results (for released 250 test samples) and models (to perform evaluation on 250 hidden test samples) with the name `submission[1-5]`. We will use `eval_file.py` and `eval_model.py` (both are available on https://github.com/thu-coai/ConvLab-2/tree/master/convlab2/dst/dstc9) to evaluate the results and models.
-2. Zip them and submit.
+2. Please add a file called `model_description.txt` in the directory `multiwoz-dst` and/or `crosswoz-dst`, and add a brief description of your system. Based on the information you provide, we will make some summarization for our track review.
+3. Zip them and submit.
 
 Notice: the final score will be the average of performance on the released data and the hidden data.
 
