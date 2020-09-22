@@ -47,8 +47,6 @@ We evaluate the performance of the dialog state tracker using two metrics:
 truth.
 2. Slot Accuracy. This metric evaluates whether the predicted label for each individual slot is exactly equal to the ground
 truth, averaged over all slots.
-3. Slot Precision/Recall/F1. These metrics evaluate whether the predicted labels for individual slots in dialog
-state are equal to the ground truth, microaveraged over all slots.
 
 ### Registration and Participation
 1. Submit the participation form [here](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR7x1M3FOeqhCttKwx4jvle9UNUVTQVRaT1AwUVRGUlc0WlBZVklQQ0tSWCQlQCN0PWcu). Your identities will NOT be made public.
