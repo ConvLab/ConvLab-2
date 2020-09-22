@@ -7,6 +7,10 @@ If you use ConvLab-2 in your research, please cite [ConvLab-2: An Open-Source To
 
 ## Participation in DSTC-9 Multi-Domain Task-Oriented Dialog Challenge II Track
 ### Updates
+09/21/2020 -- Test data released for cross-lingual multi-domain dialog state tracking task
+1. MultiWOZ: data/multiwoz_zh/dstc9-test-250.zip
+2. CrossWOZ: data/crosswoz_en/dstc9-test-250.zip
+
 07/15/2020 -- A cleaned version of MultiWOZ 2.1 train/val/test dataset is added to `data/multiwoz/MultiWOZ2.1_Cleaned.zip`
 
 ### Task Description
