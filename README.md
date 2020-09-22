@@ -66,7 +66,7 @@ truth, averaged over all slots.
     - Create your own Dockerfile with the name dev.dockerfile
 3. Zip the system and submit.
 
-Notice: the simulator for evaluation will not be exactly same as `tests/test_end2end.py` in ConvLab-2. We will release the simulator soon.
+Notice: the simulator for evaluation may not be exactly same as `tests/test_end2end.py` in ConvLab-2.
 
 #### Multi-domain Cross-lingual Dialog State Tracking Task
 1. Extend ConvLab-2 with your code, and submit up to 5 results and models. In the main directory, please create a directory called `multiwoz-dst` or `crosswoz-dst` or both, based on your selected task(s), and include your prediction results (for released 250 test samples) and models (to perform evaluation on 250 hidden test samples) with the name `submission[1-5]`. We will use `eval_file.py` and `eval_model.py` (both are available on https://github.com/thu-coai/ConvLab-2/tree/master/convlab2/dst/dstc9) to evaluate the results and models.
