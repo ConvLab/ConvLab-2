@@ -11,6 +11,8 @@ If you use ConvLab-2 in your research, please cite [ConvLab-2: An Open-Source To
 1. MultiWOZ: [data/multiwoz_zh/dstc9-test-250.zip](https://github.com/ConvLab/ConvLab-2/blob/master/data/multiwoz_zh/dstc9-test-250.zip)
 2. CrossWOZ: [data/crosswoz_en/dstc9-test-250.zip](https://github.com/ConvLab/ConvLab-2/blob/master/data/crosswoz_en/dstc9-test-250.zip)
 
+Evaluation script: `eval_file.py` and `eval_model.py` on https://github.com/thu-coai/ConvLab-2/tree/master/convlab2/dst/dstc9.
+
 07/15/2020 -- A cleaned version of MultiWOZ 2.1 train/val/test dataset is added to `data/multiwoz/MultiWOZ2.1_Cleaned.zip`
 
 ### Task Description
@@ -40,7 +42,7 @@ As part of the Ninth Dialog System Technology Challenge (DSTC9),  Microsoft Rese
 
 ### Evaluation
 #### Multi-domain End-to-end Dialog Challenge Task
-1. Automatic end2end Evaluation: The submitted system (code) will be evaluated using the user-simulator setting `bertnlu + AgendaPolicy + templateNLG` as in [ConvLab-2](https://github.com/thu-coai/Convlab-2). We will use the evaluator MultiWozEvaluator in `convlab2/evaluator/multiwoz_eval.py` to report metrics, including success rate, number of turns, precision, recall, and F1 score. The success rate is considered as the key metric in the automatic evaluation.
+1. Automatic end2end Evaluation: The submitted system (code) will be evaluated using the user-simulator setting `bertnlu + AgendaPolicy + templateNLG` as in [ConvLab-2](https://github.com/thu-coai/Convlab-2). We will use the evaluator MultiWozEvaluator in `convlab2/evaluator/multiwoz_eval.py` to report metrics, including success rate, complete rate, book rate, number of turns, inform precision/recall/F1. The success rate is considered as the key metric in the automatic evaluation.
 Note: The reference number (`Ref`) represents the index of the booked entity in the database (see [dbquery](https://github.com/thu-coai/ConvLab-2/blob/master/convlab2/util/multiwoz/dbquery.py) for details), which will be checked in the automatic evaluation.
 2. Human Evaluation: The submitted system will be evaluated in Amazon Mechanic Turk. Crowd-workers will communicate with your summited system, and provide a rating based on the whole experience (language understanding, appropriateness, etc.)
 
@@ -64,9 +66,13 @@ truth, averaged over all slots.
     - Create your own Dockerfile with the name dev.dockerfile
 3. Zip the system and submit.
 
+Notice: the simulator for evaluation will not be exactly same as `tests/test_end2end.py` in ConvLab-2. We will release the simulator soon.
+
 #### Multi-domain Cross-lingual Dialog State Tracking Task
-1. Extend ConvLab-2 with your code, and submit up to 5 results.  In the main directory, please create a directory called `multiwoz-dst` or `crosswoz-dst` or both, based on your selected task(s), and include your prediction results with the name `submission[1-5]`. 
+1. Extend ConvLab-2 with your code, and submit up to 5 results and models. In the main directory, please create a directory called `multiwoz-dst` or `crosswoz-dst` or both, based on your selected task(s), and include your prediction results (for released 250 test samples) and models (to perform evaluation on 250 hidden test samples) with the name `submission[1-5]`. We will use `eval_file.py` and `eval_model.py` (both are available on https://github.com/thu-coai/ConvLab-2/tree/master/convlab2/dst/dstc9) to evaluate the results and models.
 2. Zip them and submit.
+
+Notice: the final score will be the average of performance on the released data and the hidden data.
 
 **If you are participating in both tasks, you can submit one zip file with both tasks' results.** 
 
