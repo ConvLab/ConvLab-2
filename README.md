@@ -7,6 +7,8 @@ If you use ConvLab-2 in your research, please cite [ConvLab-2: An Open-Source To
 
 ## Participation in DSTC-9 Multi-Domain Task-Oriented Dialog Challenge II Track
 ### Updates
+09/24/2020 -- Ontology for DST released. Values are extracted from all data (include all test data). see `ontology-data.json` in each data dir. Add explanation of labeling criteria for Cross-lingual DST task in the task description.
+
 09/22/2020 -- Test submission open. If you want to validate whether your submission is errorless before the final submission, you can submit a test submission in CodaLab. Note that CodaLab does not generate reports on the dashboard. We will manually validate your submission and email you about the results. Please do not hesitate to contact us if you have any questions.
 
 09/21/2020 -- Test data released for cross-lingual multi-domain dialog state tracking task
@@ -25,6 +27,10 @@ As part of the Ninth Dialog System Technology Challenge (DSTC9),  Microsoft Rese
 **End-to-end Multi-domain Task Completion Dialog** — In recent years there has been an increasing interest in building complex task completion bots that span over multiple domains. In this task, participants will develop an end-to-end dialog system that receives natural language as an input and generates natural language as an output in the travel planning setting. There is no restriction on the modeling approaches, and all resources/datasets/pre-trained models in the community can be used for model training. The system will be evaluated in MultiWOZ 2.1 dataset setting with ConvLab-2.
 
 **Cross-lingual Multi-domain Dialog State Tracking** — Building a dialog system that handles multiple languages becomes increasingly important with the rapid process of globalization. To advance state-of-the-art technologies in handling cross-lingual multi-domain dialogs, we offer the task of building cross-lingual dialog state trackers with a training set in resource-rich language, and dev/test set in a resource-poor language. In particular, this task consists of two sub-tasks. One uses English as the resource-rich language and Chinese as the resource-poor language on the MultiWOZ dataset, and the other one uses Chinese as the resource-rich language and English as the resource-poor language on the CrossWOZ dataset.
+
+labeling criteria:
+1. Please consult the original papers first ([MultiWOZ](https://arxiv.org/abs/1810.00278), [MultiWOZ 2.1](https://arxiv.org/abs/1907.01669), [CrossWOZ](https://arxiv.org/abs/2002.11893)). And provided ontology based on data `ontology-data.json`.
+2. There are some noisy and confusing annotations in dataset, such as `when to annotate the name of the restaurant/hotel/attraction?`, we open an issue #7 to share the thoughts.
 
 ### Timeline
 <table>
@@ -76,7 +82,7 @@ Notice: the simulator evaluation and human evaluation may not be exactly the sam
 2. Please add a file called `model_description.txt` in the directory `multiwoz-dst` and/or `crosswoz-dst`, and add a brief description of your system. Based on the information you provide, we will make some summarization for our track review.
 3. Zip them and submit.
 
-Notice: the final score will be the average of performance on the released data and the hidden data.
+Notice: the final score will be the average of performance on the released data and the hidden data. We will use the `sys_state_init` of CrossWOZ dataset as DST label.
 
 **If you are participating in both tasks, you can submit one zip file with both tasks' results.** 
 
