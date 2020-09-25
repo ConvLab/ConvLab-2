@@ -54,7 +54,7 @@ labeling criteria:
 Note: The reference number (`Ref`) represents the index of the booked entity in the database (see [dbquery](https://github.com/thu-coai/ConvLab-2/blob/master/convlab2/util/multiwoz/dbquery.py) for details), which will be checked in the automatic evaluation.
 2. Human Evaluation: The submitted system will be evaluated in Amazon Mechanic Turk. Crowd-workers will communicate with your summited system, and provide a rating based on the whole experience (language understanding, appropriateness, etc.)
 
-For participants interested in the baseline model performance, please check [test scripts](https://github.com/thu-coai/ConvLab-2/tree/master/tests) in ConvLab-2.
+For participants interested in the ConvLab-2 baseline model performance, please check [test scripts](https://github.com/thu-coai/ConvLab-2/tree/master/tests) in ConvLab-2.
 #### Multi-domain Cross-lingual Dialog State Tracking Task
 We evaluate the performance of the dialog state tracker using two metrics:
 1. Joint Goal Accuracy. This metric evaluates whether the predicted dialog state is exactly equal to the ground
@@ -74,8 +74,6 @@ truth, averaged over all slots.
     - Create your own Dockerfile with the name dev.dockerfile
 3. Please add a file called `model_description.txt` in the directory `end2end`, and add a brief description of your system. Based on the information you provide, we will make some summarization for our track review.
 4. Zip the system and submit.
-
-**For human evaluation, please make sure that your agent is setup stateless.**  `convlab2/human_eval/run_agent.py`
 
 Notice: the simulator evaluation and human evaluation may not be exactly the same as `tests/test_end2end.py` and `convlab2/human_eval/` in ConvLab-2, respectively.
 
