@@ -7,6 +7,8 @@ If you use ConvLab-2 in your research, please cite [ConvLab-2: An Open-Source To
 
 ## Participation in DSTC-9 Multi-Domain Task-Oriented Dialog Challenge II Track
 ### Updates
+09/25/2020 -- Notice: In End-to-end Multi-domain Task Completion Dialog task, DB grounded information is considered for task success in evaluation. Please check evaluation scripts in ConvLab-2 for details.
+
 09/24/2020 -- Notice: For participants in End-to-end Multi-domain Task Completion Dialog task, please ensure that in your human evaluation script `human.py`, your bot/agent service is set up stateless (similar as in `run_agent.py`). 
 
 09/24/2020 -- Ontology for DST released. Values are extracted from all data (include all test data). see `ontology-data.json` in each data dir. Add explanation of labeling criteria for Cross-lingual DST task in the task description.
