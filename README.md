@@ -68,12 +68,14 @@ truth, averaged over all slots.
 
 ### Submission (Tentative)
 ####  Multi-domain End-to-end Dialog Challenge Task
-1. Extend ConvLab-2 with your code, and submit up to 5 agents. In the main directory, please create a directory called `end2end`, and sub-directories with names `submission[1-5]`. In the sub-directory, add your runnable main python scripts for both automatic evaluation and human evaluation, respectively. For automatic evaluation, please use a similar format as `tests/test_end2end.py` in ConvLab-2 with the main script name as `automatic.py`. For human evaluation, please use a similar format as `convlab2/human_eval/run_agent.py` in ConvLab-2 with the main script name as `human.py`. Human evaluation is executed in Amazon Mechanic Turk. Please make sure that your agent is compatible with `convlab2/human_eval/run.py` for evaluation on Amazon Mechanic Turk.
+1. Extend ConvLab-2 with your code, and submit up to 5 agents. In the main directory, please create a directory called `end2end`, and sub-directories with names `submission[1-5]`. In the sub-directory, add your runnable main python scripts for both automatic evaluation and human evaluation, respectively. For automatic evaluation, please use a similar format as `tests/test_end2end.py` in ConvLab-2 with the main script name as `automatic.py`. For human evaluation, please use a similar format as `convlab2/human_eval/run_agent.py` in ConvLab-2 with the main script name as `human.py`. Human evaluation is executed in Amazon Mechanic Turk. Please make sure that your agent is compatible with `convlab2/human_eval/run.py` for evaluation on Amazon Mechanic Turk. Since the human evaluation service supports concurrent workers, **please make sure that your service in run_agent.py is stateless** (the dialog agent should be set up in a manner that it does not use its existing state, but receives the dialog state via in_request[‘agent_state’]). 
 2. If your code uses external packages beyond the existing docker environment, please choose one of the following two approaches to specify your environment requirements:
     - Add install.sh under the main directory. Running install.sh should install all required extra packages.
     - Create your own Dockerfile with the name dev.dockerfile
 3. Please add a file called `model_description.txt` in the directory `end2end`, and add a brief description of your system. Based on the information you provide, we will make some summarization for our track review.
 4. Zip the system and submit.
+
+**For human evaluation, please make sure that your agent is setup stateless.**  `convlab2/human_eval/run_agent.py`
 
 Notice: the simulator evaluation and human evaluation may not be exactly the same as `tests/test_end2end.py` and `convlab2/human_eval/` in ConvLab-2, respectively.
 
