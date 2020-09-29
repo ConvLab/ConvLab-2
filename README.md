@@ -56,9 +56,9 @@ labeling criteria:
 </tr><tr>
 <td><b> Nov 17, 2020</b></td>  <td> Paper submission deadline </td>
 </tr><tr>
-<td><b> Dec 3, 2020</b></td>  <td> Paper acceptance notification </td>
+ <td><b> Nov 18, 2020 - Nov 30, 2020 </b></td>  <td> Review period </td>
 </tr><tr>
-<td><b> Nov 18, 2020 - Nov 30, 2020 </b></td>  <td> Review period </td>
+<td><b> Dec 3, 2020</b></td>  <td> Paper acceptance notification </td>
 </tr><tr>
 <td><b> Dec 18, 2020</b></td>  <td> Camera-ready submission deadline </td>
 </tr>
