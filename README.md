@@ -81,14 +81,14 @@ truth, averaged over all slots.
     - Add install.sh under the main directory. Running install.sh should install all required extra packages.
     - Create your own Dockerfile with the name dev.dockerfile
 3. Please add a file called `model_description.txt` in the directory `end2end`, and add a brief description of your system. Based on the information you provide, we will make some summarization for our track review.
-4. Zip the system and submit (Once you click 'Submit' in CodaLab, a window pops up for you to upload the zip file).
+4. Zip the system and submit (Click 'Participate' in https://aka.ms/dstc-mdtc, select Test Submission or Final Submission, and fill in required information. Once you click 'Submit' in CodaLab, a window pops up for you to upload the zip file).
 
 Notice: the simulator evaluation and human evaluation may not be exactly the same as `tests/test_end2end.py` and `convlab2/human_eval/` in ConvLab-2, respectively.
 
 #### Multi-domain Cross-lingual Dialog State Tracking Task
 1. Extend ConvLab-2 with your code, and submit up to 5 results and models. In the main directory, please create a directory called `multiwoz-dst` or `crosswoz-dst` or both, based on your selected task(s), and include your prediction results (for released 250 test samples) and models (to perform evaluation on 250 hidden test samples) with the name `submission[1-5]`. We will use `eval_file.py` and `eval_model.py` (both are available on https://github.com/thu-coai/ConvLab-2/tree/master/convlab2/dst/dstc9) to evaluate the results and models.
 2. Please add a file called `model_description.txt` in the directory `multiwoz-dst` and/or `crosswoz-dst`, and add a brief description of your system. Based on the information you provide, we will make some summarization for our track review.
-3. Zip them and submit (Once you click 'Submit' in CodaLab, a window pops up for you to upload the zip file).
+3. Zip them and submit (Click 'Participate' in https://aka.ms/dstc-mdtc, select Test Submission or Final Submission, and fill in required information. Once you click 'Submit' in CodaLab, a window pops up for you to upload the zip file).
 
 Notice: the final score will be the average of performance on the released data and the hidden data. We will use the `sys_state_init` of CrossWOZ dataset as DST label.
 
