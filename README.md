@@ -81,7 +81,7 @@ truth, averaged over all slots.
     - Add install.sh under the main directory. Running install.sh should install all required extra packages.
     - Create your own Dockerfile with the name dev.dockerfile
 3. Please add a file called `model_description.txt` in the directory `end2end`, and add a brief description of your system. Based on the information you provide, we will make some summarization for our track review.
-4. Zip the system and submit (Click 'Participate' in https://aka.ms/dstc-mdtc, select Test Submission or Final Submission, and fill in required information. Once you click 'Submit' in CodaLab, a window pops up for you to upload the zip file).
+4. Zip the system and submit (Click 'Participate' in https://aka.ms/dstc-mdtc, select Test Submission or Final Submission, and fill in required information. Once you click 'Submit' in CodaLab, a window pops up for you to upload the zip file). In case that your models are too large, you can share your model checkpoints in cloud drives and add scripts to download models.
 
 Notice: the simulator evaluation and human evaluation may not be exactly the same as `tests/test_end2end.py` and `convlab2/human_eval/` in ConvLab-2, respectively.
 
