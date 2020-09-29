@@ -7,6 +7,8 @@ If you use ConvLab-2 in your research, please cite [ConvLab-2: An Open-Source To
 
 ## Participation in DSTC-9 Multi-Domain Task-Oriented Dialog Challenge II Track
 ### Updates
+09/29/2020 -- Paper submission dates updated. We encourage all participants to wrap up your methods as a paper and submit it to our workshop. The link for submissions is https://cmt3.research.microsoft.com/DSTC92021. You can find paper submission guidelines as in https://dstc9.dstc.community/paper-submission. 
+
 09/28/2020 -- Ontology extracted from database for DST released. Values are extracted from database. see `ontology-db.json` in each data dir.
 
 09/27/2020 -- Notice: The scripts [`agent.py`](https://github.com/thu-coai/ConvLab-2/blob/6684b67ac9d05d3b5452484d7445ba455a90d5fe/convlab2/dialog_agent/agent.py) and [`run_agent.py`](https://github.com/thu-coai/ConvLab-2/blob/6684b67ac9d05d3b5452484d7445ba455a90d5fe/convlab2/human_eval/run_agent.py) are updated to enable a better interface encapsulation for stateless bot services. However, you do not need to change anything if your current human evaluation script already works well.
@@ -52,7 +54,13 @@ labeling criteria:
 </tr><tr>
 <td><b> Oct 19,2020</b></td>  <td> Results announced </td>
 </tr><tr>
-<td><b> Nov 2020</b></td>  <td> Paper submission deadline </td>
+<td><b> Nov 17, 2020</b></td>  <td> Paper submission deadline </td>
+</tr><tr>
+<td><b> Dec 3, 2020</b></td>  <td> Paper acceptance notification </td>
+</tr><tr>
+<td><b> Nov 18, 2020 - Nov 30, 2020 </b></td>  <td> Review period </td>
+</tr><tr>
+<td><b> Dec 18, 2020</b></td>  <td> Camera-ready submission deadline </td>
 </tr>
 </table>
 
