@@ -7,6 +7,8 @@ If you use ConvLab-2 in your research, please cite [ConvLab-2: An Open-Source To
 
 ## Participation in DSTC-9 Multi-Domain Task-Oriented Dialog Challenge II Track
 ### Updates
+10/01/2020 -- Update DST evaluation script for value normalization and CrossWOZ `name` issue.
+
 09/29/2020 -- Paper submission dates updated. We encourage all participants to wrap up your methods as a paper and submit it to our workshop. The link for submissions is https://cmt3.research.microsoft.com/DSTC92021. You can find paper submission guidelines as in https://dstc9.dstc.community/paper-submission. 
 
 09/28/2020 -- Ontology extracted from database for DST released. Values are extracted from database. see `ontology-db.json` in each data dir.
