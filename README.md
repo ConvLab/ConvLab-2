@@ -84,7 +84,7 @@ truth, averaged over all slots.
 1. Submit the participation form [here](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR7x1M3FOeqhCttKwx4jvle9UNUVTQVRaT1AwUVRGUlc0WlBZVklQQ0tSWCQlQCN0PWcu). Your identities will NOT be made public.
 2. Participate at https://aka.ms/dstc-mdtc (sign up if you do not have a CodaLab account). Participation is welcome from any team.
 
-### Submission (Tentative)
+### Submission
 ####  Multi-domain End-to-end Dialog Challenge Task
 1. Extend ConvLab-2 with your code, and submit up to 5 agents. In the main directory, please create a directory called `end2end`, and sub-directories with names `submission[1-5]`. In the sub-directory, add your runnable main python scripts for both automatic evaluation and human evaluation, respectively. For automatic evaluation, please use a similar format as `tests/test_end2end.py` in ConvLab-2 with the main script name as `automatic.py`. For human evaluation, please use a similar format as `convlab2/human_eval/run_agent.py` in ConvLab-2 with the main script name as `human.py`. Since the human evaluation service supports concurrent workers in Amazon Mechanic Turk, please ensure that **your service in human.py is stateless and compatible with `convlab2/human_eval/run.py`** (Your dialog agent should not use its existing internal state, but takes the dialog state via in_request[‘agent_state’]).
 2. If your code uses external packages beyond the existing docker environment, please choose one of the following two approaches to specify your environment requirements:
