@@ -2,19 +2,24 @@
     evaluate DST model
 """
 
+import os
+
 from convlab2.dst.dstc9.eval_model import evaluate
-from convlab2.dst.dstc9.utils import prepare_data
+from convlab2.dst.dstc9.utils import prepare_data, extract_gt
+
+
+def eval_team(team):
+    for subtask in ['multiwoz', 'crosswoz']:
+        test_data = prepare_data(subtask, 'dstc9-250')
+        gt = extract_gt(test_data)
+        for i in range(2, 6):
+            model_dir = os.path.join(team, f'{subtask}-dst', f'submission{i}')
+            if not os.path.exists(model_dir):
+                continue
+            print(model_dir)
+            evaluate(model_dir, subtask, test_data, gt)
 
 if __name__ == '__main__':
-    from argparse import ArgumentParser
-    parser = ArgumentParser()
-    parser.add_argument('subtask', type=str, choices=['multiwoz', 'crosswoz'])
-    parser.add_argument('split', type=str, choices=['train', 'val', 'test', 'human_val'])
-    args = parser.parse_args()
-    subtask = args.subtask
-    test_data = prepare_data(subtask, args.split)
-    gt = {
-        dialog_id: [state for _, _, state in turns]
-        for dialog_id, turns in test_data.items()
-    }
-    evaluate('example', subtask, test_data, gt)
+    eval_team('H1kkkkkkkk')
+    # eval_team('adamlin120')
+    # eval_team('myhexinfishzhou')
