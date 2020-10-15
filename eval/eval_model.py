@@ -3,6 +3,7 @@
 """
 
 import os
+from argparse import ArgumentParser
 
 from convlab2.dst.dstc9.eval_model import evaluate
 from convlab2.dst.dstc9.utils import prepare_data, extract_gt
@@ -19,8 +20,16 @@ def eval_team(team):
             print(model_dir)
             evaluate(model_dir, subtask, test_data, gt)
 
+
 if __name__ == '__main__':
-    for team in os.listdir('.'):
-        if not os.path.isdir(team):
-            continue
-        eval_team(team)
+    parser = ArgumentParser()
+    parser.add_argument('--teams', type=str, nargs='*')
+    args = parser.parse_args()
+    if not args.teams:
+        for team in os.listdir('.'):
+            if not os.path.isdir(team):
+                continue
+            eval_team(team)
+    else:
+        for team in args.teams:
+            eval_team(team)
