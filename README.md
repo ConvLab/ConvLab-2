@@ -7,6 +7,14 @@ If you use ConvLab-2 in your research, please cite [ConvLab-2: An Open-Source To
 
 ## Participation in DSTC-9 Multi-Domain Task-Oriented Dialog Challenge II Track
 ### Updates
+10/01/2020 -- Update DST evaluation script for value normalization and CrossWOZ `name` issue.
+
+09/29/2020 -- Paper submission dates updated. We encourage all participants to wrap up your methods as a paper and submit it to our workshop. The link for submissions is https://cmt3.research.microsoft.com/DSTC92021. You can find paper submission guidelines as in https://dstc9.dstc.community/paper-submission. 
+
+09/28/2020 -- Ontology extracted from database for DST released. Values are extracted from database. see `ontology-db.json` in each data dir.
+
+09/27/2020 -- Notice: The scripts [`agent.py`](https://github.com/thu-coai/ConvLab-2/blob/6684b67ac9d05d3b5452484d7445ba455a90d5fe/convlab2/dialog_agent/agent.py) and [`run_agent.py`](https://github.com/thu-coai/ConvLab-2/blob/6684b67ac9d05d3b5452484d7445ba455a90d5fe/convlab2/human_eval/run_agent.py) are updated to enable a better interface encapsulation for stateless bot services. However, you do not need to change anything if your current human evaluation script already works well.
+
 09/25/2020 -- Notice: In End-to-end Multi-domain Task Completion Dialog task, DB grounded information is considered for task success in evaluation. Please check evaluation scripts in ConvLab-2 for details.
 
 09/24/2020 -- Notice: For participants in End-to-end Multi-domain Task Completion Dialog task, please ensure that in your human evaluation script `human.py`, your bot/agent service is set up stateless (similar as in `run_agent.py`). 
@@ -48,7 +56,13 @@ labeling criteria:
 </tr><tr>
 <td><b> Oct 19,2020</b></td>  <td> Results announced </td>
 </tr><tr>
-<td><b> Nov 2020</b></td>  <td> Paper submission deadline </td>
+<td><b> Nov 17, 2020</b></td>  <td> Paper submission deadline </td>
+</tr><tr>
+ <td><b> Nov 18, 2020 - Nov 30, 2020 </b></td>  <td> Review period </td>
+</tr><tr>
+<td><b> Dec 3, 2020</b></td>  <td> Paper acceptance notification </td>
+</tr><tr>
+<td><b> Dec 18, 2020</b></td>  <td> Camera-ready submission deadline </td>
 </tr>
 </table>
 
@@ -70,21 +84,21 @@ truth, averaged over all slots.
 1. Submit the participation form [here](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR7x1M3FOeqhCttKwx4jvle9UNUVTQVRaT1AwUVRGUlc0WlBZVklQQ0tSWCQlQCN0PWcu). Your identities will NOT be made public.
 2. Participate at https://aka.ms/dstc-mdtc (sign up if you do not have a CodaLab account). Participation is welcome from any team.
 
-### Submission (Tentative)
+### Submission
 ####  Multi-domain End-to-end Dialog Challenge Task
 1. Extend ConvLab-2 with your code, and submit up to 5 agents. In the main directory, please create a directory called `end2end`, and sub-directories with names `submission[1-5]`. In the sub-directory, add your runnable main python scripts for both automatic evaluation and human evaluation, respectively. For automatic evaluation, please use a similar format as `tests/test_end2end.py` in ConvLab-2 with the main script name as `automatic.py`. For human evaluation, please use a similar format as `convlab2/human_eval/run_agent.py` in ConvLab-2 with the main script name as `human.py`. Since the human evaluation service supports concurrent workers in Amazon Mechanic Turk, please ensure that **your service in human.py is stateless and compatible with `convlab2/human_eval/run.py`** (Your dialog agent should not use its existing internal state, but takes the dialog state via in_request[‘agent_state’]).
 2. If your code uses external packages beyond the existing docker environment, please choose one of the following two approaches to specify your environment requirements:
+    - Create your own Dockerfile with the name dev.dockerfile (preferred)
     - Add install.sh under the main directory. Running install.sh should install all required extra packages.
-    - Create your own Dockerfile with the name dev.dockerfile
 3. Please add a file called `model_description.txt` in the directory `end2end`, and add a brief description of your system. Based on the information you provide, we will make some summarization for our track review.
-4. Zip the system and submit.
+4. Zip the system and submit (Click 'Participate' in https://aka.ms/dstc-mdtc, select Test Submission or Final Submission, and fill in required information. Once you click 'Submit' in CodaLab, a window pops up for you to upload the zip file). In case that your models are too large, you can share your model checkpoints in cloud drives and add scripts to download models.
 
 Notice: the simulator evaluation and human evaluation may not be exactly the same as `tests/test_end2end.py` and `convlab2/human_eval/` in ConvLab-2, respectively.
 
 #### Multi-domain Cross-lingual Dialog State Tracking Task
 1. Extend ConvLab-2 with your code, and submit up to 5 results and models. In the main directory, please create a directory called `multiwoz-dst` or `crosswoz-dst` or both, based on your selected task(s), and include your prediction results (for released 250 test samples) and models (to perform evaluation on 250 hidden test samples) with the name `submission[1-5]`. We will use `eval_file.py` and `eval_model.py` (both are available on https://github.com/thu-coai/ConvLab-2/tree/master/convlab2/dst/dstc9) to evaluate the results and models.
 2. Please add a file called `model_description.txt` in the directory `multiwoz-dst` and/or `crosswoz-dst`, and add a brief description of your system. Based on the information you provide, we will make some summarization for our track review.
-3. Zip them and submit.
+3. Zip them and submit (Click 'Participate' in https://aka.ms/dstc-mdtc, select Test Submission or Final Submission, and fill in required information. Once you click 'Submit' in CodaLab, a window pops up for you to upload the zip file).
 
 Notice: the final score will be the average of performance on the released data and the hidden data. We will use the `sys_state_init` of CrossWOZ dataset as DST label.
 
