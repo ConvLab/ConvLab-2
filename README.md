@@ -7,6 +7,8 @@ If you use ConvLab-2 in your research, please cite [ConvLab-2: An Open-Source To
 
 ## Participation in DSTC-9 Multi-Domain Task-Oriented Dialog Challenge II Track
 ### Updates
+10/30/2020 -- Release public datasets for cross-lingual DST task.
+
 10/19/2020 -- Evaluation results are released at https://convlab.github.io/.
 
 10/01/2020 -- Update DST evaluation script for value normalization and CrossWOZ `name` issue.
