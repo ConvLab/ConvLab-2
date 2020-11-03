@@ -7,6 +7,8 @@ If you use ConvLab-2 in your research, please cite [ConvLab-2: An Open-Source To
 
 ## Participation in DSTC-9 Multi-Domain Task-Oriented Dialog Challenge II Track
 ### Updates
+11/03/2020 -- Update CrossWOZ evaluation code and leaderboard. See evaluation section for details.
+
 10/30/2020 -- Release public datasets for cross-lingual DST task.
 1. MultiWOZ: [data/multiwoz_zh/dstc9-250.zip](https://github.com/ConvLab/ConvLab-2/blob/master/data/multiwoz_zh/dstc9-250.json.zip)
 2. CrossWOZ: [data/crosswoz_en/dstc9-250.zip](https://github.com/ConvLab/ConvLab-2/blob/master/data/crosswoz_en/dstc9-250.json.zip)
@@ -85,6 +87,10 @@ We evaluate the performance of the dialog state tracker using two metrics:
 truth.
 2. Slot Accuracy. This metric evaluates whether the predicted label for each individual slot is exactly equal to the ground
 truth, averaged over all slots.
+
+**11/03/2020 update:**
+
+During the evaluation, we found that there is a gap between collected CrossWOZ data and our assumption. Specifically, as mentioned in Issue #7(https://github.com/ConvLab/ConvLab-2/issues/7), we think that the agent should log down the names of attraction/hotel/restaurant when the user accepts them. However, the collected data miss a number of the name labels in this situation. Therefore, we utilize the candidate lists from selectedResults to correct name labels. We’ve updated our evaluation code (https://github.com/thu-coai/ConvLab-2/blob/master/convlab2/dst/dstc9/utils.py#L13-L68) with an additional argument to reflect this change(set correct_name_label=True). We also provide an additional leaderboard for CrossWOZ at https://convlab.github.io. This change is considered as applying two different evaluation approaches, and both of the original and new leaderboards are valid.
 
 ### Registration and Participation
 1. Submit the participation form [here](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR7x1M3FOeqhCttKwx4jvle9UNUVTQVRaT1AwUVRGUlc0WlBZVklQQ0tSWCQlQCN0PWcu). Your identities will NOT be made public.
