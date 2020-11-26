@@ -7,6 +7,10 @@ If you use ConvLab-2 in your research, please cite [ConvLab-2: An Open-Source To
 
 ## Participation in DSTC-9 Multi-Domain Task-Oriented Dialog Challenge II Track
 ### Updates
+11/26/2020 -- Release public test sets in source language for cross-lingual DST task.
+1. MultiWOZ: [data/multiwoz_zh/dstc9-250.zip](https://github.com/ConvLab/ConvLab-2/blob/master/data/multiwoz_zh/dstc9-250-src.json.zip)
+2. CrossWOZ: [data/crosswoz_en/dstc9-250.zip](https://github.com/ConvLab/ConvLab-2/blob/master/data/crosswoz_en/dstc9-250-src.json.zip)
+
 11/03/2020 -- Update CrossWOZ evaluation code and leaderboard. See evaluation section for details.
 
 10/30/2020 -- Release public datasets for cross-lingual DST task.
